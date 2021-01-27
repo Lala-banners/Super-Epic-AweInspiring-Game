@@ -34,7 +34,9 @@ public class Shooting : MonoBehaviour
             Vector2 direction = worldMousePos - firePointPos; //setting direction
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; //setting angle of aiming
             Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, angle)); //setting the rotation
-            Instantiate<GameObject>(projectile, firePointPos, rotation); //instantiate net to follow the mouse
+            Instantiate<GameObject>(projectile, firePointPos, rotation); //instantiate net to follow the mouse 
         }
     }
+
+
 }
