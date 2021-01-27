@@ -11,16 +11,7 @@ public class Shooting : MonoBehaviour
 
     [Tooltip("How fast the projectile will travel to the ghost")]
     public float fireRate = 2f;
-
-    public Sprite aimVisual; //dotted line for accurate shooting
-    public SpriteRenderer spriteRenderer;
     #endregion
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -44,8 +35,6 @@ public class Shooting : MonoBehaviour
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; //setting angle of aiming
             Quaternion rotation = Quaternion.Euler(new Vector3(0f, 0f, angle)); //setting the rotation
             Instantiate<GameObject>(projectile, firePointPos, rotation); //instantiate net to follow the mouse
-
-            spriteRenderer.flipX = direction.x < 0; //flipping sprite to point in direction of shooting
         }
     }
 }

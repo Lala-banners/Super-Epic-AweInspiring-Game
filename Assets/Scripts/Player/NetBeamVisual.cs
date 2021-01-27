@@ -4,7 +4,8 @@ public class NetBeamVisual : MonoBehaviour
 {
     //Fire line visual to show where projectile will go
 
-    public GameObject projectileVisual;
+    public GameObject crosshairs;
+    //public GameObject projectileVisual;
     private Vector3 target;
 
     // Start is called before the first frame update
@@ -19,6 +20,6 @@ public class NetBeamVisual : MonoBehaviour
     {
         //Make target line
         target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
-        projectileVisual.transform.position = new Vector2(target.x, target.y); //make visual line position same as mouse for accurate shooting
+        crosshairs.transform.position = new Vector2(target.x, target.y); //make crosshairs position same as mouse for accurate shooting
     }
 }
