@@ -2302,7 +2302,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 100
   maxHealth: 100
-  tempWeapon: {fileID: 0}
 --- !u!114 &1564881523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2316,7 +2315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1744465583}
-  projectile: {fileID: 6061877027862282629, guid: 94a734367b498524f838b896deb7a67a,
+  projectile: {fileID: 3352958370642446701, guid: 94a734367b498524f838b896deb7a67a,
     type: 3}
   fireRate: 2
 --- !u!114 &1564881524

@@ -6,18 +6,20 @@ public class Projectile : MonoBehaviour
 {
     public float movementSpeed = 10f;
     private SpriteRenderer spriteRenderer;
-
+    public Rigidbody2D rb2d;
+    public int capture = 20;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb2d.velocity = transform.right * movementSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.right * Time.deltaTime * movementSpeed;
+        //transform.position += transform.right * Time.deltaTime * movementSpeed;
 
         //If no longer visible
         if (!spriteRenderer.isVisible)
@@ -40,4 +42,20 @@ public class Projectile : MonoBehaviour
 
         }
     }*/
+
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        //Ghost ghost = hitInfo.GetComponent<Ghost>();
+        /*if(ghost != null)
+        {
+            ghost.FillCaptureBeam(capture);
+
+        }
+
+        Instantiate(captureEffect, transform.position, transform.rotation);
+
+        Destroy(gameObject);
+        
+         */
+    }
 }
